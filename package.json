@@ -1,18 +1,22 @@
 {
-  "name": "cypress-toolkit",
-  "version": "0.0.1",
-  "description": "Contains commands and helpers to aid to develop Cypress E2E tests",
-  "main": "dist/index.js",
+  "name": "@talkdesk-tdx/cypress-toolkit",
+  "version": "0.0.4",
+  "description": "Contains commands and helpers to aid to develop Cypress E2E tests with Atlas",
   "repository": "git@github.com:talkdesk-tdx/cypress-toolkit.git",
   "author": "Talkdesk TDX",
-  "private": true,
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "scripts": {
-    "postinstall": "npm-install-peers",
-    "build": "rm -rf ./dist & tsc",
-    "dev": "build -w"
+    "prepare": "install-peers",
+    "build": "rm -rf ./dist && tsc && yarn mergeDefinitions",
+    "dev": "yarn install:peers & build -w",
+    "mergeDefinitions": "node mergeDefinitions"
   },
   "peerDependencies": {
     "cypress": "^5.1.0",
@@ -20,7 +24,7 @@
   },
   "devDependencies": {
     "@types/node": "14.10.1",
-    "npm-install-peers": "1.2.1",
+    "install-peers-cli": "2.2.0",
     "typescript": "4.0.2"
   }
 }

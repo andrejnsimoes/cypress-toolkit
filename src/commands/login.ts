@@ -86,4 +86,4 @@ const login = (user: UserLogin) => {
   });
 };
 
-Cypress.Commands.add("login", login);
+export default Cypress.Commands.add("login", login);

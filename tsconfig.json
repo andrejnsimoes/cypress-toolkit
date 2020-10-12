@@ -5,8 +5,9 @@
     "moduleResolution": "node",
     "types": ["cypress", "@types/node"],
     "declaration": true,
-    "declarationMap": true,
-    "outDir": "dist"
+    "outDir": "dist",
+    "rootDir": "src",
+    "allowSyntheticDefaultImports": true
   },
   "exclude": ["node_modules/*", "**/node_modules/*"]
 }

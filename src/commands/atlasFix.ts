@@ -9,7 +9,7 @@
  * is strictly prohibited.
  */
 
-Cypress.Commands.add("atlasFix", (appId: string) => {
+export default Cypress.Commands.add("atlasFix", (appId: string) => {
   if (!appId) {
     throw new Error("atlasFix - Define the application ID");
   }

@@ -8,5 +8,6 @@
  * U.S. Copyright Office. Unauthorized copying of this file, via any medium
  * is strictly prohibited.
  */
-import "./login";
-import "./atlasFix";
+
+export { default as login } from "./login";
+export { default as atlasFix } from "./atlasFix";
