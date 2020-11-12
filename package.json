@@ -1,6 +1,6 @@
 {
   "name": "@talkdesk/cypress-toolkit",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Contains commands and helpers to aid to develop Cypress E2E tests with Atlas",
   "repository": "git@github.com:talkdesk-tdx/cypress-toolkit.git",
   "author": "Talkdesk TDX",
