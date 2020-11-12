@@ -9,32 +9,32 @@
  * is strictly prohibited.
  */
 
-export default Cypress.Commands.add("atlasFix", (appId: string) => {
-  if (!appId) {
-    throw new Error("atlasFix - Define the application ID");
+function onMessage(message: MessageEvent) {
+  // eslint-disable-next-line @typescript-eslint/no-this-alias
+  const that: Window = this;
+
+  // Try to get the iframe where the app is
+  const frame = that.document.querySelector(
+    "iframe.aut-iframe"
+  ) as HTMLIFrameElement;
+
+  if (!frame) {
+    throw new Error("Could not find atlas application");
   }
 
-  function onMessage(message: MessageEvent) {
-    // Receive a message from the app that is hosted in atlas
-    const frame = window.parent.document.querySelector(
-      `iframe[id*='${appId}']`
-    ) as HTMLIFrameElement;
+  // Receive a message from the app that is hosted in atlas
+  const {
+    data: { jsonrpc, nonce },
+  } = message;
 
-    if (!frame) {
-      throw new Error(`Could not find ${appId} application`);
-    }
+  // And redirect it to atlas! \o/
+  frame?.contentWindow?.postMessage(
+    { jsonrpc, nonce },
+    frame.contentWindow.document.referrer,
+    [...message.ports]
+  );
+}
 
-    const {
-      data: { jsonrpc, nonce },
-    } = message;
-
-    // And redirect it to atlas! \o/
-    frame?.contentWindow?.postMessage(
-      { jsonrpc, nonce },
-      frame.contentWindow.document.referrer,
-      [...message.ports]
-    );
-  }
-
-  window.parent.window.addEventListener("message", onMessage);
+export default Cypress.Commands.add("atlasFix", () => {
+  window.top.addEventListener("message", onMessage);
 });
