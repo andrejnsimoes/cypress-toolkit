@@ -7,22 +7,20 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
-    "src"
+    "**/src/**"
   ],
   "scripts": {
-    "prepare": "install-peers",
+    "prepare": "yarn build",
     "build": "rm -rf ./dist && tsc && yarn mergeDefinitions",
     "dev": "yarn install:peers & build -w",
-    "mergeDefinitions": "node mergeDefinitions",
-    "prepack": "yarn install:peers && yarn build"
+    "mergeDefinitions": "node mergeDefinitions"
   },
-  "peerDependencies": {
+  "dependencies": {
     "cypress": "^5.1.0",
     "url": "^0.11.0"
   },
   "devDependencies": {
     "@types/node": "14.10.1",
-    "install-peers-cli": "2.2.0",
     "typescript": "4.0.2"
   }
 }
