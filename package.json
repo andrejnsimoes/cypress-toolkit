@@ -17,7 +17,7 @@
     "build": "rm -rf ./dist && tsc && yarn mergeDefinitions",
     "dev": "yarn install:peers & build -w",
     "mergeDefinitions": "node mergeDefinitions",
-    "prepack": "yarn build"
+    "prepack": "yarn install:peers && yarn build"
   },
   "peerDependencies": {
     "cypress": "^5.1.0",
