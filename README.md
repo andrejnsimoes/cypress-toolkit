@@ -26,6 +26,6 @@ import "@talkdesk-tdx/cypress-toolkit";
 
 ## Commands
 
-#### [](https://github.com/talkdesk-tdx/guide-ui/blob/master/readme.md#yarn-docker)`cy.atlasFix("<app-name>")` - Invoke this command before any unit test to start performing unit tests with atlas.
+#### [](https://github.com/talkdesk-tdx/guide-ui/blob/master/readme.md#yarn-docker)`cy.atlasFix()` - Invoke this command before any unit test to start performing unit tests with atlas.
 
 #### [](https://github.com/talkdesk-tdx/guide-ui/blob/master/readme.md#yarn-docker)`cy.login(<>)` - In order to perform the authentication with Talkdesk's API gateway.
