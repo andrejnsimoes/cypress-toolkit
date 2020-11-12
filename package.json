@@ -6,9 +6,6 @@
   "author": "Talkdesk TDX",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "files": [
-    "dist"
-  ],
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
   },
