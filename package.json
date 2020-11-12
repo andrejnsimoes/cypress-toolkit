@@ -6,6 +6,9 @@
   "author": "Talkdesk TDX",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "files": [
+    "src"
+  ],
   "scripts": {
     "prepare": "install-peers",
     "build": "rm -rf ./dist && tsc && yarn mergeDefinitions",
