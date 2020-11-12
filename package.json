@@ -6,9 +6,6 @@
   "author": "Talkdesk TDX",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
-  },
   "scripts": {
     "prepare": "install-peers",
     "build": "rm -rf ./dist && tsc && yarn mergeDefinitions",
