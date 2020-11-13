@@ -16,10 +16,10 @@
     "mergeDefinitions": "node mergeDefinitions"
   },
   "peerDependencies": {
-    "cypress": "^5.1.0"
+    "cypress": "5.1.0"
   },
   "dependencies": {
-    "url": "^0.11.0"
+    "url": "0.11.0"
   },
   "devDependencies": {
     "@types/node": "14.10.1",
