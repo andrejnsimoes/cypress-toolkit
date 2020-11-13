@@ -10,7 +10,7 @@
     "**/src/**"
   ],
   "scripts": {
-    "prepare": "install-peers -f cypress@5.1.0 && yarn build",
+    "prepare": "install-peers -f --network-concurrency 1 cypress@5.1.0 && yarn build",
     "build": "rm -rf ./dist && tsc && yarn mergeDefinitions",
     "dev": "build -w",
     "mergeDefinitions": "node mergeDefinitions"
