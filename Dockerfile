@@ -1,5 +1,5 @@
 # This dockerfile is for Meza assets upload
-FROM nexus.svc.talkdeskapp.com/node:15.2.0-slim
+FROM hub.talkdeskapp.com/node:15.2.0-slim
 
 # Update image and install dependencies
 
