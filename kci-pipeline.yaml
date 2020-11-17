@@ -1,0 +1,5 @@
+Build phase:
+    stages:
+        Build:
+            steps:
+                - docker-compose run --rm build

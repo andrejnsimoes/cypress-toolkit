@@ -1,0 +1,5 @@
+* @pf-costa @pmfonsecatdx
+Dockerfile* @talkdesk-tdx/tdx-kb-sre
+kci-pipeline.yaml @talkdesk-tdx/tdx-kb-sre
+docker-compose.yml @talkdesk-tdx/tdx-kb-sre
+Jenkinsfile @talkdesk-tdx/tdx-kb-sre
