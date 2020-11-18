@@ -9,6 +9,5 @@
  * is strictly prohibited.
  */
 
-export { injectCommands } from "./commands";
-export * as validators from "./validators";
-export * as strings from "./strings";
+// converts a string to a regex expression
+export default (text: string) => new RegExp(`\\b${text}\\b`, "g");

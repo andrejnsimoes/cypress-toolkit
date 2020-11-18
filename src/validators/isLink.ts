@@ -9,6 +9,8 @@
  * is strictly prohibited.
  */
 
-export { injectCommands } from "./commands";
-export * as validators from "./validators";
-export * as strings from "./strings";
+export default (text: string) => {
+  return new RegExp(
+    "([a-zA-Z0-9]+://)?([a-zA-Z0-9_]+:[a-zA-Z0-9_]+@)?([a-zA-Z0-9.-]+\\.[A-Za-z]{2,4})(:[0-9]+)?(/.*)?"
+  ).test(text);
+};

@@ -9,5 +9,4 @@
  * is strictly prohibited.
  */
 
-export { default as login } from "./login";
-export { default as atlasFix } from "./atlasFix";
+export { default as injectCommands } from "./injectCommands";

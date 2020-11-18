@@ -9,6 +9,9 @@
  * is strictly prohibited.
  */
 
-export { injectCommands } from "./commands";
-export * as validators from "./validators";
-export * as strings from "./strings";
+/// <reference types="cypress" />
+/// <reference types="cypress-iframe"/>
+
+export default (option: RegExp | string, label: string) => {
+  cy.iframe().contains(label).parent().click().contains(option).click();
+};

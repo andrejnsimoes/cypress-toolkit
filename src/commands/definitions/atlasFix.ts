@@ -14,9 +14,7 @@ function onMessage(message: MessageEvent) {
   const that: Window = this;
 
   // Try to get the iframe where the app is
-  const frame = that.document.querySelector(
-    "iframe.aut-iframe"
-  ) as HTMLIFrameElement;
+  const frame = that.document.querySelector("iframe.aut-iframe") as HTMLIFrameElement;
 
   if (!frame) {
     throw new Error("Could not find atlas application");
@@ -35,6 +33,6 @@ function onMessage(message: MessageEvent) {
   );
 }
 
-export default Cypress.Commands.add("atlasFix", () => {
+export default () => {
   window.top.addEventListener("message", onMessage);
-});
+};

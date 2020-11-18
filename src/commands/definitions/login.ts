@@ -30,9 +30,7 @@ const extractCsrfToken = (response: Cypress.Response) => {
 
   const parser = new window.DOMParser();
   const doc = parser.parseFromString(response.body, "text/html");
-  const crsfSelector = doc.querySelector(
-    "meta[name='_csrf'"
-  ) as HTMLMetaElement;
+  const crsfSelector = doc.querySelector("meta[name='_csrf'") as HTMLMetaElement;
   const token = crsfSelector?.content;
 
   if (!token) {
@@ -43,9 +41,7 @@ const extractCsrfToken = (response: Cypress.Response) => {
 };
 
 const extractFinalRequestUrl = (response: Cypress.Response) =>
-  response.allRequestResponses[response.allRequestResponses.length - 1][
-    "Request URL"
-  ];
+  response.allRequestResponses[response.allRequestResponses.length - 1]["Request URL"];
 
 const buildAuthenticationUrl = (baseUrl: string) => {
   const requestUrl = parse(baseUrl);
@@ -71,7 +67,7 @@ const loginWithCsrf = (
     },
   });
 
-const login = (user: UserLogin) => {
+export default (user: UserLogin) => {
   const url = "/";
   cy.request({
     url,
@@ -85,5 +81,3 @@ const login = (user: UserLogin) => {
     loginWithCsrf(requestUrl, user.email, user.password, csrfToken);
   });
 };
-
-export default Cypress.Commands.add("login", login);

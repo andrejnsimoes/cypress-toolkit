@@ -1,6 +1,6 @@
 {
   "name": "@talkdesk/cypress-toolkit",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Contains commands and helpers to aid to develop Cypress E2E tests with Atlas",
   "repository": "git@github.com:talkdesk-tdx/cypress-toolkit.git",
   "author": "Talkdesk TDX",
@@ -16,13 +16,15 @@
     "mergeDefinitions": "node mergeDefinitions"
   },
   "peerDependencies": {
-    "cypress": "5.1.0"
+    "cypress": "5.1.0",
+    "cypress-iframe": "1.0.1"
   },
   "dependencies": {
     "url": "0.11.0"
   },
   "devDependencies": {
     "@types/node": "14.10.1",
+    "@types/testing-library__cypress": "5.0.8",
     "install-peers-cli": "2.2.0",
     "typescript": "4.0.2"
   }

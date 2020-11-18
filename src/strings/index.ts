@@ -9,6 +9,4 @@
  * is strictly prohibited.
  */
 
-export { injectCommands } from "./commands";
-export * as validators from "./validators";
-export * as strings from "./strings";
+export { default as exactText } from "./exactText";
