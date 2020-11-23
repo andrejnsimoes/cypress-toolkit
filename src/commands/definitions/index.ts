@@ -12,6 +12,7 @@
 export { default as atlasFix } from "./atlasFix";
 export { default as clickButton } from "./clickButton";
 export { default as login } from "./login";
+export { default as logout } from "./logout";
 export { default as selectOption } from "./selectOption";
 export { default as selectOptionByLabel } from "./selectOptionByLabel";
 export { default as typeInInput } from "./typeInInput";

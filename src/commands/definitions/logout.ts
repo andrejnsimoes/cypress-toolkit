@@ -1,0 +1,22 @@
+/*
+ * Talkdesk Confidential
+ *
+ * Copyright (C) Talkdesk Inc. 2020
+ *
+ * The source code for this program is not published or otherwise divested
+ * of its trade secrets, irrespective of what has been deposited with the
+ * U.S. Copyright Office. Unauthorized copying of this file, via any medium
+ * is strictly prohibited.
+ */
+
+/// <reference types="cypress" />
+
+export default () => {
+  // Find agent avatar in atlas
+  cy.get(`[data-testid="user-avatar"]`).click();
+  // Logout
+  cy.contains(/^Logout$/).click();
+  // Wait for page to load
+  // eslint-disable-next-line cypress/no-unnecessary-waiting
+  cy.wait(2000);
+};

@@ -5,6 +5,7 @@ declare namespace Cypress {
     atlasFix(app: string): void;
     clickButton(name: RegExp | string): void;
     login({ email, password }: { email: string; password: string }): void;
+    logout(): void;
     selectOption(
       dataQa: string,
       optionText: RegExp | string,

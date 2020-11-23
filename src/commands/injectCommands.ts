@@ -15,6 +15,7 @@ export default () => {
   Cypress.Commands.add("atlasFix", commandDefinitions.atlasFix);
   Cypress.Commands.add("clickButton", commandDefinitions.clickButton);
   Cypress.Commands.add("login", commandDefinitions.login);
+  Cypress.Commands.add("logout", commandDefinitions.logout);
   Cypress.Commands.add("selectOption", commandDefinitions.selectOption);
   Cypress.Commands.add("selectOptionByLabel", commandDefinitions.selectOptionByLabel);
   Cypress.Commands.add("typeInInput", commandDefinitions.typeInInput);

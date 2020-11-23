@@ -1,6 +1,6 @@
 {
   "name": "@talkdesk/cypress-toolkit",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Contains commands and helpers to aid to develop Cypress E2E tests with Atlas",
   "repository": "git@github.com:talkdesk-tdx/cypress-toolkit.git",
   "author": "Talkdesk TDX",
@@ -13,7 +13,8 @@
     "prepare": "install-peers -f --network-concurrency 1 cypress@5.1.0 && yarn build",
     "build": "rm -rf ./dist && tsc && yarn mergeDefinitions",
     "dev": "build -w",
-    "mergeDefinitions": "node mergeDefinitions"
+    "mergeDefinitions": "node mergeDefinitions",
+    "release": "standard-version"
   },
   "peerDependencies": {
     "cypress": "5.1.0",
@@ -26,6 +27,7 @@
     "@types/node": "14.10.1",
     "@types/testing-library__cypress": "5.0.8",
     "install-peers-cli": "2.2.0",
+    "standard-version": "9.0.0",
     "typescript": "4.0.2"
   }
 }
